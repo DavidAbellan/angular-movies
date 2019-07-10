@@ -1,0 +1,15 @@
+<div class="columns columnas">
+  <div *ngFor="let movie of movies" class="column is-3 carta">
+            
+     <img src="http://image.tmdb.org/t/p/w185{{movie.poster_path}}" /> 
+    <h1 class="title">{{movie.title}}</h1>
+    <p class="subtitle">{{movie.original_title}}</p>
+    <p>Puntuación : {{movie.vote_average}} </p>
+    <p >{{movie.release_date | formatDate}}</p>
+
+
+  </div>
+
+
+
+</div>
