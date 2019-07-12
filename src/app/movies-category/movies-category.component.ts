@@ -10,28 +10,33 @@ import { ApiServiceService } from '../services/api-service.service';
 export class MoviesCategoryComponent implements OnInit {
   category: string;
   movies: object[] = [];
+  page = 1 ;
+
   constructor(private route: ActivatedRoute,
     private llamadaApi: ApiServiceService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.category = params.category;
-      this.llamadaApi.getCategory(this.category)
+      this.page=1;
+      this.llamadaApi.getCategory(this.category,this.page)
       .then((data: any) => {
         
-        this.movies = data.results
-        console.log(data.results);
-
+        this.movies = data.results;
       }
 
       ).catch(Error);
 
     });
-
-
-
-
+    
   }
-}
-
+  
+  
+  
+  onScroll(){
+  this.llamadaApi.getCategory(this.category,++this.page).then((data:any)=>{
+    this.movies = [...this.movies, ...data.results]
+  }).catch(error =>{
+    console.log(error);
+  })}}
 

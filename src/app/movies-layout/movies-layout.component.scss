@@ -1,0 +1,27 @@
+h1,h2{
+    color:white;
+    max-width: 9em;
+    text-shadow: 2px 2px 2px #000000;
+}
+.columnas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,400px));
+    grid-gap: 0.5em;
+   
+    
+}
+ 
+  
+p {
+    color: #8ca59f;
+    max-width: 10em;
+    font-size: 13px;
+    
+}
+.layout {
+    background-size: cover ;
+    background-repeat: no-repeat;
+    width: 30em;
+    height: 20em;
+    
+}

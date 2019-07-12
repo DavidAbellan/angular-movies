@@ -11,11 +11,17 @@ export class ApiServiceService {
 
   constructor(private http : HttpClient) { }
   
-  getCategory(cat) {
-    console.log('CAT:::',cat);
-   return  this.http.get(`${this.API_URL}/movie/${cat}${this.API_KEY}`).toPromise();
+  getCategory(cat,page) {
+   return  this.http.get(`${this.API_URL}/movie/${cat}${this.API_KEY}&page=${page}`).toPromise();
    
 
+  }
+  getDetail(id) {
+    return this.http.get(`${this.API_URL}/movie/${id}${this.API_KEY}`).toPromise();
+  }
+
+  getSimilarMovies(id,page){
+    return this.http.get(`${this.API_URL}/movie/${id}/similar${this.API_KEY}&page=${page}`).toPromise();
   }
 
 }
