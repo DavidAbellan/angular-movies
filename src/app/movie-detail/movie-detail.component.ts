@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiServiceService} from '../services/api-service.service';
-import { error } from '@angular/compiler/src/util';
 @Component({
   selector: 'app-movie-detail',
   templateUrl: './movie-detail.component.html',

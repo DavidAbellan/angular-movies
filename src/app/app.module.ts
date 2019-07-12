@@ -9,7 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormatDatePipe } from './format-date.pipe';
 import { MoviesLayoutComponent } from './movies-layout/movies-layout.component';
 import { InfiniteScrollModule} from 'ngx-infinite-scroll';
-import { MovieDetailComponent } from './movie-detail/movie-detail.component'
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { MovieSearchComponent } from './movie-search/movie-search.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component'
     MoviesCategoryComponent,
     FormatDatePipe,
     MoviesLayoutComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    MovieSearchComponent
   ],
   imports: [
     BrowserModule,

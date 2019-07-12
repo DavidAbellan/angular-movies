@@ -23,5 +23,7 @@ export class ApiServiceService {
   getSimilarMovies(id,page){
     return this.http.get(`${this.API_URL}/movie/${id}/similar${this.API_KEY}&page=${page}`).toPromise();
   }
-
+  lookingMovies (word,page) {
+    return this.http.get(`${this.API_URL}/search/movie${this.API_KEY}&query=${word}&page=${page}`).toPromise()
+  }
 }
