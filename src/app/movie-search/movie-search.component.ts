@@ -8,7 +8,7 @@ import { ApiServiceService} from '../services/api-service.service'
 })
 export class MovieSearchComponent implements OnInit {
   @Input() word : any ;
-  movies : any[] = [];
+  movies : any;
   page : number = 1;
   constructor(private llamadaApi : ApiServiceService) { }
   
@@ -16,10 +16,12 @@ export class MovieSearchComponent implements OnInit {
     
    
   }
-  lookup(word) {
+  lookup(word) : void  {
       this.llamadaApi.lookingMovies(word,this.page).then(res =>{
         this.word = word;
-        this.movies = res.results;
+        console.log(res);
+        let resultados : any  = res.results;
+        this.movies = resultados;
         this.page = 1;
        }).catch(Error)
     

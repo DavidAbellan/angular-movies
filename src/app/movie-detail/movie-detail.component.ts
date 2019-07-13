@@ -8,19 +8,23 @@ import { ApiServiceService} from '../services/api-service.service';
 })
 export class MovieDetailComponent implements OnInit {
   movie : object = {};
-  id : any;
+  id : number;
   similarMovies : object[] = []
   page:number=1;
+  rate : number;
 
   constructor( private route : ActivatedRoute, private llamadaApi :  ApiServiceService) { }
   ngOnInit() {
-    this.id = this.route.params;
+    this.id = this.route.params.value.id;
 
-     this.llamadaApi.getDetail(this.id.value.id).then((data:any)=>{
+     this.llamadaApi.getDetail(this.id).then((data:any)=>{
          
        this.movie = data ;
+       this.rate = Number(data.vote_average);
+       this.rate = this.rate / 2;
+       console.log(this.rate);
        
-       this.llamadaApi.getSimilarMovies(this.id.value.id,this.page).then((movies:any) => {
+       this.llamadaApi.getSimilarMovies(this.id,this.page).then((movies:any) => {
          this.similarMovies = movies.results;
          this.page = 1;
  
@@ -30,10 +34,20 @@ export class MovieDetailComponent implements OnInit {
 
   }
   onScroll(){
-    this.llamadaApi.getSimilarMovies(this.id.value.id,++this.page).then((data:any)=>{
+    this.llamadaApi.getSimilarMovies(this.id,++this.page).then((data:any)=>{
       this.similarMovies = [...this.similarMovies, ...data.results]
     }).catch(error =>{
       console.log(error);
     })}
+
+  setRate(e) {
+    this.llamadaApi.setRate(e,this.id).then((data:any) =>{
+       console.log('DATAAA',data);
+    }).catch(error => {
+      console.log(error);
+    })
+
+
+  }  
   
 }

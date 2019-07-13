@@ -2,6 +2,7 @@
     <input  class="input is-focused" type="text" (keyup)="lookup(word = $event.target.value)" placeholder="Look up for movies!!">
   </div>
   <p> Results for : {{word}}</p>
+ 
   <div class="search-results"
     infiniteScroll
     [infiniteScrollDistance]="1"

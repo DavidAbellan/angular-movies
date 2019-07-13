@@ -10,7 +10,9 @@ import { FormatDatePipe } from './format-date.pipe';
 import { MoviesLayoutComponent } from './movies-layout/movies-layout.component';
 import { InfiniteScrollModule} from 'ngx-infinite-scroll';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
-import { MovieSearchComponent } from './movie-search/movie-search.component'
+import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { SetStarsPipe } from './set-stars.pipe';
+import { NgxStarsModule } from 'ngx-stars';
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { MovieSearchComponent } from './movie-search/movie-search.component'
     FormatDatePipe,
     MoviesLayoutComponent,
     MovieDetailComponent,
-    MovieSearchComponent
+    MovieSearchComponent,
+    SetStarsPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    NgxStarsModule
   ],
   providers: [ ApiServiceService],
   bootstrap: [AppComponent]
