@@ -8,14 +8,15 @@ import { ApiServiceService} from '../services/api-service.service';
 })
 export class MovieDetailComponent implements OnInit {
   movie : object = {};
-  id : number;
+  id : any;
   similarMovies : object[] = []
   page:number=1;
   rate : number;
 
   constructor( private route : ActivatedRoute, private llamadaApi :  ApiServiceService) { }
   ngOnInit() {
-    this.id = this.route.params.value.id;
+    this.id  = this.route.params;
+    this.id = this.id.value.id;
 
      this.llamadaApi.getDetail(this.id).then((data:any)=>{
          
@@ -42,7 +43,6 @@ export class MovieDetailComponent implements OnInit {
 
   setRate(e) {
     this.llamadaApi.setRate(e,this.id).then((data:any) =>{
-       console.log('DATAAA',data);
     }).catch(error => {
       console.log(error);
     })

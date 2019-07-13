@@ -1,0 +1,8 @@
+<h1> Movies</h1>
+<div class="search-results"
+infiniteScroll
+[infiniteScrollDistance]="1"
+[infiniteScrollThrottle]="200"
+(scrolled)="onScroll()">
+<app-movies-layout [data] = "movies" ></app-movies-layout>
+</div>

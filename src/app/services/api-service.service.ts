@@ -29,7 +29,10 @@ export class ApiServiceService {
   setRate(rate,id){
     rate = rate * 2; 
     let request = {'value': rate};
-    console.log(request);
     return this.http.post(`${this.API_URL}/movie/${id}/rating${this.API_KEY}`,request).toPromise();
   } 
+  getGenreMovies(genre,page){
+    return this.http.get(`${this.API_URL}/discover/movie${this.API_KEY}&language=en-US&sort_by=vote_count.desc&with_genres=${genre}&page=${page}`).toPromise();
+  }
+ 
 }

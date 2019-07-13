@@ -13,6 +13,7 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
 import { SetStarsPipe } from './set-stars.pipe';
 import { NgxStarsModule } from 'ngx-stars';
+import { MoviesGenreComponent } from './movies-genre/movies-genre.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NgxStarsModule } from 'ngx-stars';
     MovieDetailComponent,
     MovieSearchComponent,
     SetStarsPipe,
+    MoviesGenreComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,12 +16,12 @@ export class MovieSearchComponent implements OnInit {
     
    
   }
-  lookup(word) : void  {
+  lookup(word) : any  {
       this.llamadaApi.lookingMovies(word,this.page).then(res =>{
         this.word = word;
         console.log(res);
-        let resultados : any  = res.results;
-        this.movies = resultados;
+        let resultados : any = res;
+        this.movies = resultados.results;
         this.page = 1;
        }).catch(Error)
     
