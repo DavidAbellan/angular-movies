@@ -1,7 +1,7 @@
 <div class="image is-1by2 main"  [ngStyle]="{'background-image': 'url(http://image.tmdb.org/t/p/w1280/' +  movie.poster_path +  ')'}">
        <div  class="buttons are-small enlinea" *ngFor = "let genre of movie.genres">
         
-                <a href= "/movies/genre/{{genre.id}}" class="button">{{genre.name}}</a>
+                <a href= "/movies/genre/{{genre.id}}?name={{genre.name}}" class="button">{{genre.name}}</a>
              
        </div>
    <h1> {{movie.title}}</h1>
@@ -12,7 +12,7 @@
    
   </div>
      <div class="stars-div">
-        <ngx-stars  [color]="'black'" [size]="3"  [maxStars]="5" [initialStars]="rate" (ratingOutput)="setRate($event)"></ngx-stars>
+        <ngx-stars  [color]="'black'" [size]="3"  [maxStars]="5" [initialStars]=rate (ratingOutput)="setRate($event)"></ngx-stars>
      </div>
 <h6 class="similares">
     Similar Titles:

@@ -6,8 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiServiceService {
 
-  API_URL = "https://api.themoviedb.org/3"
-  API_KEY = "?api_key=80a1695fec74ccf4bb37c6b5c03ab6ee"
+  API_URL = "https://api.themoviedb.org/3";
+  API_KEY = "?api_key=80a1695fec74ccf4bb37c6b5c03ab6ee";
+  CORS = "https://crossorigin.me/";
 
   constructor(private http : HttpClient) { }
   
@@ -24,7 +25,7 @@ export class ApiServiceService {
     return this.http.get(`${this.API_URL}/movie/${id}/similar${this.API_KEY}&page=${page}`).toPromise();
   }
   lookingMovies (word,page) {
-    return this.http.get(`${this.API_URL}/search/movie/${this.API_KEY}&query=${word}&page=${page}`).toPromise()
+    return this.http.get(`${this.API_URL}/search/movie${this.API_KEY}&query=${word}&page=${page}`).toPromise()
   }
   setRate(rate,id){
     rate = rate * 2; 

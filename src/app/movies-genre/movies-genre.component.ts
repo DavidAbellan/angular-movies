@@ -10,10 +10,12 @@ export class MoviesGenreComponent implements OnInit {
   genero : any;
   movies : any;
   page: number = 1;
+  nombreGenero : string ;
   
   constructor(private llamadaApi : ApiServiceService, private route : ActivatedRoute) { }
 
   ngOnInit() {
+    this.nombreGenero = this.route.snapshot.queryParams.name;
     this.genero = this.route.params;
     this.genero = this.genero.value.genre;
     this.llamadaApi.getGenreMovies(this.genero,this.page).then(res => {

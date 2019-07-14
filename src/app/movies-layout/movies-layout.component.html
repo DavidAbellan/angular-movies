@@ -4,13 +4,32 @@
 
   <div *ngFor="let movie of data" class="column is-3 carta" >
       <a routerLink="/detail/{{movie.id}}"  routerLinkActive='active'  >
-       <div class="layout" [ngStyle]="{'background-image': 'url(http://image.tmdb.org/t/p/w1280' +  movie.backdrop_path +  ')'}" >
+      <div *ngIf="movie.backdrop_path !== null" >
 
+          <div class="layout"  [ngStyle]="{'background-image': 'url(http://image.tmdb.org/t/p/w1280' +  movie.backdrop_path +  ')'}" >
+                
                <h1 class="title">{{movie.title}}</h1>
                <p class="subtitle">{{movie.original_title}}</p>
                <p>Puntuación : {{movie.vote_average}} </p>
                <p >{{movie.release_date | formatDate}}</p>
-       </div>
+           </div>
+
+      </div> 
+
+
+      
+      <div class="notFound" *ngIf="movie.backdrop_path === null"  [ngStyle]="{'background-image': 'url(../../../assets/images/img-big-notfound.jpg'+')'}"  >
+
+          <div class="layout"  >
+                
+               <h1 class="title">{{movie.title}}</h1>
+               <p class="subtitle">{{movie.original_title}}</p>
+               <p>Puntuación : {{movie.vote_average}} </p>
+               <p >{{movie.release_date | formatDate}}</p>
+           </div>
+
+      </div>  
+      
 
       </a>
 
