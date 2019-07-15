@@ -5,7 +5,12 @@ nav {
     background-color: #0e0e62;
     padding:1em;
     a{
-        color: white;
+        color:white;
         margin:0 1em;
+    }
+    a:hover {
+        transition: 1s;
+        color:black;
+        font-size: 31px;
     }
 }

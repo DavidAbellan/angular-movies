@@ -35,5 +35,7 @@ export class ApiServiceService {
   getGenreMovies(genre,page){
     return this.http.get(`${this.API_URL}/discover/movie${this.API_KEY}&language=en-US&sort_by=vote_count.desc&with_genres=${genre}&page=${page}`).toPromise();
   }
- 
+  getCast (id){
+    return this.http.get(`${this.API_URL}/movie/${id}/credits${this.API_KEY}`).toPromise();
+  }
 }

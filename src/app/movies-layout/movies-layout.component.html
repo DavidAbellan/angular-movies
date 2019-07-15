@@ -2,7 +2,7 @@
 
 >
 
-  <div *ngFor="let movie of data" class="column is-3 carta" >
+  <div *ngFor="let movie of data" class="column is-3" >
       <a routerLink="/detail/{{movie.id}}"  routerLinkActive='active'  >
       <div *ngIf="movie.backdrop_path !== null" >
 

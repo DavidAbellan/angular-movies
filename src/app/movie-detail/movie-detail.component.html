@@ -5,15 +5,28 @@
              
        </div>
    <h1> {{movie.title}}</h1>
+   <div class ="direct" *ngFor ="let d of director">
+     <p>by  {{d.name}} </p>
+
+  </div> 
    <p>{{movie.overview}}</p>
-   
+   <div class="stars-div" *ngIf="rate">
+      <ngx-stars  [color]="'black'" [size]="3"  [maxStars]="5" [initialStars]="rate" (ratingOutput)="setRate($event)"></ngx-stars>
+   </div>
+
+   <h2>Cast</h2>
+   <div class="cast">
+   <div *ngFor ="let p of cast">
+      <p>{{p.name}} as {{p.character}} </p>
+
+   </div>
+</div>
    
    
    
   </div>
-     <div class="stars-div">
-        <ngx-stars  [color]="'black'" [size]="3"  [maxStars]="5" [initialStars]=rate (ratingOutput)="setRate($event)"></ngx-stars>
-     </div>
+
+<div *ngIf = "similarMovies.length > 0">
 <h6 class="similares">
     Similar Titles:
   </h6>
@@ -24,3 +37,7 @@ infiniteScroll
 (scrolled)="onScroll()">
 <app-movies-layout [data]="similarMovies"></app-movies-layout>
 </div>
+</div>
+<div *ngIf = "similarMovies.length === 0">
+   <p>No Similar Movies </p>
+</div>     

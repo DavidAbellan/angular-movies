@@ -26,4 +26,21 @@ p {
     color: white;
 
 }
+.cast {
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 10em ;
+    overflow: scroll;
+    background-color: transparent;
+}
+h2 {
+    color: white;
+    font-size: 18px;
+}
+.direct{
+    display: flex;
+    background-color: transparent;
+    align-content: flex-start;
+    margin-bottom: 3em;
+}
 
