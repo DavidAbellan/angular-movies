@@ -38,4 +38,10 @@ export class ApiServiceService {
   getCast (id){
     return this.http.get(`${this.API_URL}/movie/${id}/credits${this.API_KEY}`).toPromise();
   }
+  getPerson(id){
+    return this.http.get(`${this.API_URL}/person/${id}${this.API_KEY}`).toPromise();
+  }
+  getPersonMovies(id,page){
+    return this.http.get(`${this.API_URL}/discover/movie${this.API_KEY}&language=en-US&sort_by=vote_count.desc&with_people=${id}&page=${page}`).toPromise();
+  }
 }

@@ -1,0 +1,17 @@
+<div *ngIf="character" class="image is-1by2 main"  >
+        <div class="image is-1by2 main"  [ngStyle]="{'background-image': 'url(http://image.tmdb.org/t/p/w1280/' +  character.profile_path +  ')'}">
+
+<!--     <img src="http://image.tmdb.org/t/p/w1280/{{character.profile_path}}"/>
+ -->    <h1>{{character.name}}</h1>
+        </div>
+</div>
+<h2>WORKS ON</h2>
+<div class="search-results"
+infiniteScroll
+[infiniteScrollDistance]="1"
+[infiniteScrollThrottle]="200"
+(scrolled)="onScroll()">
+
+<app-movies-layout [data]='movies' ></app-movies-layout>
+
+</div>

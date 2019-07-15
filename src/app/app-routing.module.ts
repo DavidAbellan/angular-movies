@@ -4,9 +4,13 @@ import { MoviesCategoryComponent } from './movies-category/movies-category.compo
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieSearchComponent} from './movie-search/movie-search.component';
 import{ MoviesGenreComponent} from './movies-genre/movies-genre.component';
+import { MoviesDirectorComponent } from './movies-director/movies-director.component';
 
 
 const routes: Routes = [
+  {
+    path: 'movies/people/:id' , component : MoviesDirectorComponent
+   },
   {
     path: 'movies/genre/:genre' , component : MoviesGenreComponent
    },

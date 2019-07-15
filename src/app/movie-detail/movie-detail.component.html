@@ -6,7 +6,7 @@
        </div>
    <h1> {{movie.title}}</h1>
    <div class ="direct" *ngFor ="let d of director">
-     <p>by  {{d.name}} </p>
+         <a href="/movies/people/{{d.id}}"><p>by  {{d.name}} </p></a>
 
   </div> 
    <p>{{movie.overview}}</p>

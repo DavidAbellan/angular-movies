@@ -20,6 +20,7 @@ export class MovieDetailComponent implements OnInit {
     this.route.params.subscribe(params => {
     window.scrollTo({top:0});
     this.id = params.id;
+    this.rate = undefined;
     this.llamadaApi.getDetail(this.id).then((data: any) => {
       
       this.movie = data;
