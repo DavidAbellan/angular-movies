@@ -1,17 +1,35 @@
-<div *ngIf="character" class="image is-1by2 main"  >
-        <div class="image is-1by2 main"  [ngStyle]="{'background-image': 'url(http://image.tmdb.org/t/p/w1280/' +  character.profile_path +  ')'}">
+<div *ngIf="character">
+  <div class="main">
+    <div>
+      <div *ngIf="character.profile_path !== null">
+        <img class="people" src="http://image.tmdb.org/t/p/w1280/{{character.profile_path}}" />
+      </div>
+      <p>{{character.known_for_department}}</p>
+      <p class="place">{{character.place_of_birth}}</p>
+    </div>
+    <div class="info">
+      <h2>{{character.name}}</h2>
+      <div *ngIf="character.also_known_as.length>0">
+        <p>Also Known as </p>
+        <div *ngFor="let alias of character.also_known_as">
+          <p>{{alias}} </p>
 
-<!--     <img src="http://image.tmdb.org/t/p/w1280/{{character.profile_path}}"/>
- -->    <h1>{{character.name}}</h1>
         </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+
 </div>
 <h2>WORKS ON</h2>
-<div class="search-results"
-infiniteScroll
-[infiniteScrollDistance]="1"
-[infiniteScrollThrottle]="200"
-(scrolled)="onScroll()">
+<div class="search-results" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="200"
+  (scrolled)="onScroll()">
 
-<app-movies-layout [data]='movies' ></app-movies-layout>
+  <app-movies-layout [data]='movies'></app-movies-layout>
 
 </div>

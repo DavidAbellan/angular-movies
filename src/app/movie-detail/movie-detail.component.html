@@ -14,12 +14,18 @@
       <ngx-stars  [color]="'black'" [size]="3"  [maxStars]="5" [initialStars]="rate" (ratingOutput)="setRate($event)"></ngx-stars>
    </div>
 
-   <h2>Cast</h2>
+   <h2>Credits</h2>
    <div class="cast">
+      <ul>
    <div *ngFor ="let p of cast">
-      <p>{{p.name}} as {{p.character}} </p>
+        <li>
+         <a href="/movies/people/{{p.id}}"> {{p.name}}</a>
+         <p>  as {{p.character}} </p>
+         </li>
+         
 
    </div>
+     </ul>
 </div>
    
    

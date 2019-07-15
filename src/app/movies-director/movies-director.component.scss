@@ -1,8 +1,4 @@
-.main{
-    height:100vh ;
-    min-height: 1000px;
-    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5))
-}
+
 h1{
     color:white;
     font-size: 10em;
@@ -13,4 +9,27 @@ h2 {
     font-size: 5em;
     text-shadow: 2px 2px 2px #000000;
 
+}
+.people {
+     background-size: cover ;
+     background-position: center;
+     width: 50%
+    }
+.main{
+    display: flex;
+    flex-flow: row nowrap;
+    h1{
+        text-align: left;
+    }
+
+}
+.info {
+    flex-basis: 80%;
+}
+p{
+    color: white;
+}
+.place{
+    font-style: italic;
+    font-weight: lighter;
 }
