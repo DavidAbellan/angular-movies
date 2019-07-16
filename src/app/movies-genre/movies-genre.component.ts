@@ -18,6 +18,7 @@ export class MoviesGenreComponent implements OnInit {
     this.nombreGenero = this.route.snapshot.queryParams.name;
     this.genero = this.route.params;
     this.genero = this.genero.value.genre;
+    console.log("RUTAAUTU",this.route.snapshot.queryParams);
     this.llamadaApi.getGenreMovies(this.genero,this.page).then(res => {
       this.movies = res;
       this.movies = this.movies.results;
