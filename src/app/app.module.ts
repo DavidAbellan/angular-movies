@@ -35,6 +35,7 @@ import { MoviesDirectorComponent } from './movies-director/movies-director.compo
     HttpClientModule,
     InfiniteScrollModule,
     NgxStarsModule
+    
   ],
   providers: [ ApiServiceService],
   bootstrap: [AppComponent]

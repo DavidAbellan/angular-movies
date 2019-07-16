@@ -17,6 +17,7 @@ export class MoviesDirectorComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe (params => {
+      window.scrollTo({top:0});
       this.page = 1;
       this.id = params.id;
       this.LlamadaApi.getPerson(this.id).then(data =>{

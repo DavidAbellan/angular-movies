@@ -3,6 +3,13 @@
     min-height: 1000px;
     background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
     overflow: auto;
+    @media screen and (max-width:"800px"){
+        min-height: 500px;
+        height:50vh ;
+
+
+        
+    }
     
 }
 h1{
@@ -31,9 +38,12 @@ p {
 .cast {
     display: flex;
     flex-flow: column wrap;
-    max-height: 10em ;
+    max-height: 20em ;
     overflow: scroll;
     background-color: transparent;
+    overflow-x: hidden;
+   
+
 }
 h2 {
     color: white;
@@ -45,5 +55,18 @@ h2 {
     align-content: flex-start;
     margin-bottom: 3em;
 }
+.names{
+    display: flex;
+    background-color:transparent;
+    width: 30%;
+    p{
+        margin-left: 0.5em;
+    }
+    @media screen and (max-width:"900px"){
+        width: 100%;
 
+
+        
+    }
+}
 

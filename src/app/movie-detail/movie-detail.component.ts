@@ -17,6 +17,7 @@ export class MovieDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private llamadaApi: ApiServiceService) { }
   ngOnInit() {
+    
     this.route.params.subscribe(params => {
     window.scrollTo({top:0});
     this.id = params.id;
@@ -65,5 +66,6 @@ export class MovieDetailComponent implements OnInit {
 
 
   }
+
 
 }

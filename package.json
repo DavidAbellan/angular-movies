@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build --prod --output-path docs --base-href /angular-movies/ ",
     "test": "ng test",
-    "postbuild" : "cp docs/index.html docs/404.html",
+    "postbuild": "cp docs/index.html docs/404.html",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },

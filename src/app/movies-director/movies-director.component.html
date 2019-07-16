@@ -1,8 +1,8 @@
 <div *ngIf="character">
-  <div class="main">
+  <div class="main" [ngStyle]="{'background-image': 'url(/assets/images/teatro.jpg)'}" >
     <div class="photoCard">
       <div *ngIf="character.profile_path !== null">
-        <img class="people" src="http://image.tmdb.org/t/p/w1280/{{character.profile_path}}" />
+        <img class="people"  [src]="'http://image.tmdb.org/t/p/w1280/' + character.profile_path" />
       </div>
       <div class="birth">
       <p>{{character.known_for_department}}</p>

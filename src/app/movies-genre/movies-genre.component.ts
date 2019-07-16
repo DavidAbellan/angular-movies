@@ -32,6 +32,7 @@ export class MoviesGenreComponent implements OnInit {
     }).catch(error =>{
       console.log(error);
     })}
+  
 
 
   

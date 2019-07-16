@@ -15,18 +15,20 @@
    </div>
 
    <h2>Credits</h2>
-   <div class="cast">
-      <ul>
-   <div *ngFor ="let p of cast">
-        <li>
-         <a routerLink="/movies/people/{{p.id}}"> {{p.name}}</a>
-         <p>  as {{p.character}} </p>
-         </li>
+   <div class="cast" >
+   <ul>
+         <div *ngFor ="let p of cast">
+            <li>
+               <div class="names">
+               <a routerLink="/movies/people/{{p.id}}"> {{p.name}}</a>
+                 <p>  as {{p.character}} </p>
+               </div> 
+           </li>
          
-
+         
+         </div>
+      </ul>
    </div>
-     </ul>
-</div>
    
    
    
