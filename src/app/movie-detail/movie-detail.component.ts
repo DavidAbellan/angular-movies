@@ -7,7 +7,7 @@ import { ApiServiceService } from '../services/api-service.service';
   styleUrls: ['./movie-detail.component.scss']
 })
 export class MovieDetailComponent implements OnInit {
-  movie: object = {};
+  movie: any;
   id: any;
   similarMovies: object[] = []
   page: number = 1;
