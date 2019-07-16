@@ -1,12 +1,12 @@
 <div class="image is-1by2 main"  [ngStyle]="{'background-image': 'url(http://image.tmdb.org/t/p/w1280/' +  movie.poster_path +  ')'}">
        <div  class="buttons are-small enlinea" *ngFor = "let genre of movie.genres">
         
-                <a href= "/movies/genre/{{genre.id}}?name={{genre.name}}" class="button">{{genre.name}}</a>
+                <a routerLink= "/movies/genre/{{genre.id}}" queryParams = "{name={{genre.name}}}" class="button">{{genre.name}}</a>
              
        </div>
    <h1> {{movie.title}}</h1>
    <div class ="direct" *ngFor ="let d of director">
-         <a href="/movies/people/{{d.id}}"><p>by  {{d.name}} </p></a>
+         <a routerLink="/movies/people/{{d.id}}"><p>by  {{d.name}} </p></a>
 
   </div> 
    <p>{{movie.overview}}</p>
@@ -19,7 +19,7 @@
       <ul>
    <div *ngFor ="let p of cast">
         <li>
-         <a href="/movies/people/{{p.id}}"> {{p.name}}</a>
+         <a routerLink="/movies/people/{{p.id}}"> {{p.name}}</a>
          <p>  as {{p.character}} </p>
          </li>
          
