@@ -1,6 +1,9 @@
 # AngularMovies
+Angular movies project server by moviedatabase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
+## DEMO
+
+[demo] (https://davidabellan.github.io/angular-movies/movies/top_rated)
 
 ## Development server
 
