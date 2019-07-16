@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Notable&display=swap');
 nav {
     display: flex;
     flex-flow : row nowrap;
     justify-content: center;
     background-color: #0e0e62;
+    width: 100%;
     padding:1em;
     a{
         color:white;
-        margin:0 1em;
-        @media screen and (max-width:"800px"){
+        font-family: 'Notable';
+        margin:0 1em 0 1em;
+        @media screen and (max-width:"1000px"){
             font-size: 18px;
+           
+    
+            
+        }
+        @media screen and (max-width:"700px"){
+            font-size: 13px;
+           
     
             
         }
@@ -17,5 +27,7 @@ nav {
         transition: 1s;
         color:black;
         font-size: 31px;
+        @media screen and (max-width:"1000px"){
+            font-size: 18px; }
     }
 }
