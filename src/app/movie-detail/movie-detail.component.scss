@@ -1,7 +1,9 @@
 .main{
     height:100vh ;
     min-height: 1000px;
-    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5))
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
+    overflow: auto;
+    
 }
 h1{
     color:white;
