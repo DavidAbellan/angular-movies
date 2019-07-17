@@ -16,6 +16,9 @@ h1{
     color:white;
     font-size: 10em;
     text-shadow: 2px 2px 2px #000000;
+    @media screen and (max-width:"600px"){
+        font-size: 54px;
+    }
 }
 p {
     color: #000000;

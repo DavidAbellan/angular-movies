@@ -1,10 +1,13 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-  <a  class="title is-3 navbar-item" routerLink="movies/top_rated" routerLinkActive='active'>Top Rated  </a>
-  <a  class="title is-3 navbar-item" routerLink ="movies/popular" routerLinkActive='active'> Popular  </a>
-  <a  class="title is-3 navbar-item" routerLink = "movies/upcoming" routerLinkActive='active'>Upcoming</a>
-  <a  class="title is-3 navbar-item" routerLink = "movies/search" routerLinkActive='active'> 🔍 </a>
+<nav class="navbar" role="navigation" aria-label="main navigation" 
+    [ngStyle]="{'background-image':'url(/assets/images/header.png)'}">
+  <a  class="title is-3 navbar-item" routerLink="movies/top_rated" routerLinkActive='active'>
+    Top Rated  </a>
+  <a  class="title is-3 navbar-item" routerLink ="movies/popular" routerLinkActive='active'>
+    Most Popular </a>
+  <a  class="title is-3 navbar-item" routerLink = "movies/upcoming" routerLinkActive='active'>
+    upcoming </a>
+  <a  class="title is-3 navbar-item" routerLink = "movies/search" routerLinkActive='active'>
+    <img class="icon" src="/assets/images/search.png"/> </a>
 
-    </div>
 </nav>
 

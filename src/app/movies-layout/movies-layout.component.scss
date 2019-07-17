@@ -8,11 +8,11 @@ h1,h2{
     grid-template-columns: repeat(auto-fit,minmax(350px,400px));
     grid-gap: 0.5em;
     margin-left: 1em;
-   
+    
     
 }
- 
-  
+
+
 p {
     color: white;
     max-width: 10em;
@@ -22,11 +22,19 @@ p {
 .layout {
     background-size: cover ;
     background-repeat: no-repeat;
-     width: 25em;
-     height: 20em;
-   
+    width: 25em;
+    height: 20em;
+    @media screen and (max-width:"500px"){
+        width: 15em;
+        height: 10em;
+    }
+    
     
 }
-.notFound {
-background-size: cover;
+
+.mbquery {
+    
+    @media screen and (max-width:"500px"){
+        width: 100vw;
+    }
 }

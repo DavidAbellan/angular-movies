@@ -2,7 +2,7 @@
 
 >
 
-  <div *ngFor="let movie of data" class="column is-3" >
+  <div *ngFor="let movie of data" class="column is-3 mbquery" >
       <a routerLink="/detail/{{movie.id}}"  routerLinkActive='active'  >
       <div *ngIf="movie.backdrop_path !== null" >
 
@@ -18,7 +18,7 @@
 
 
       
-      <div class="notFound" *ngIf="movie.backdrop_path === null"  [ngStyle]="{'background-image': 'url(../../../assets/images/img-big-notfound.jpg'+')'}"  >
+      <div class="layout" *ngIf="movie.backdrop_path === null"  [ngStyle]="{'background-image': 'url(../../../assets/images/img-big-notfound.jpg'+')'}"  >
 
           <div class="layout"  >
                 
