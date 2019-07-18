@@ -1,5 +1,5 @@
 <div *ngIf="character">
-  <div class="main" [ngStyle]="{'background-image': 'url(/assets/images/teatro.jpg)'}" >
+  <div class="main" [ngStyle]="{'background-image': 'url(assets/images/teatro.jpg)'}">>
     <div class="photoCard">
       <div *ngIf="character.profile_path !== null">
         <img class="people"  [src]="'http://image.tmdb.org/t/p/w1280/' + character.profile_path" />
